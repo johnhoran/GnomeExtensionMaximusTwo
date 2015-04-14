@@ -38,7 +38,7 @@ function updateAppMenu() {
 	}
 	
 	LOG('Override title ' + title);
-	appMenu._label.setText(title);
+	appMenu._label.set_text(title);
 	tooltip.text = title;
 	
 	return false;
@@ -110,7 +110,7 @@ function onHover(actor) {
 				WARN('showTooltip is false and delay callback ran.');
 			}
 			
-			let label = appMenu._label._label;
+			let label = appMenu._label;
 			
 			if(!label.get_clutter_text().get_layout().is_ellipsized()) {
 				// Do not need to hide.
